@@ -3,6 +3,7 @@ import 'package:flutterPlayground/ui/app_colors.dart';
 
 import 'package:flutterPlayground/ui/components/particles/holder.dart';
 import 'package:flutterPlayground/ui/components/side_nav_components/channels.dart';
+import 'package:flutterPlayground/ui/components/side_nav_components/channels_and_options.dart';
 
 import 'package:flutterPlayground/ui/components/side_nav_components/footer.dart';
 import 'package:flutterPlayground/ui/components/side_nav_components/header.dart';
@@ -45,27 +46,7 @@ class _SideNavState extends State<SideNav> {
                   ),
                   Expanded(
                     flex: 8,
-                    child: ListView(
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Expanded(child: Holder(Channels())),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Expanded(
-                          child: Holder(
-                            Row(
-                              children: <Widget>[
-                                Expanded(child: Options()),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    child: ChannelsAndOptions(),
                   ),
                 ],
               ),
