@@ -6,6 +6,7 @@ import 'package:flutterPlayground/application/models/user.dart';
 
 import 'package:flutterPlayground/ui/avatar_handler.dart';
 import 'package:flutterPlayground/ui/components/particles/circle_image.dart';
+import 'package:flutterPlayground/ui/components/particles/holder.dart';
 
 class Footer extends StatefulWidget {
   @override
@@ -36,11 +37,23 @@ class _FooterState extends State<Footer> implements AppInitListener {
             flex: 2,
             child: CircleImage(image: user.avatarData.imageProvider())),
         Expanded(
-          flex: 8,
-          child: Text('@${user.name}',
+          flex: 5,
+          child: Holder.transparent(Text('@${user.name}',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
-              )),
+              ))),
+        ),
+        Expanded(
+          flex: 1,
+          child: Icon(Icons.lock),
+        ),
+        Expanded(
+          flex: 1,
+          child: Icon(Icons.settings),
+        ),
+        Expanded(
+          flex: 1,
+          child: Icon(Icons.more_horiz),
         ),
       ],
     );

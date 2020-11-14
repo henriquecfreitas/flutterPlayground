@@ -5,6 +5,7 @@ import 'package:flutterPlayground/ui/components/particles/holder.dart';
 
 import 'package:flutterPlayground/ui/components/side_nav_components/footer.dart';
 import 'package:flutterPlayground/ui/components/side_nav_components/header.dart';
+import 'package:flutterPlayground/ui/components/side_nav_components/options.dart';
 import 'package:flutterPlayground/ui/components/side_nav_components/spaces.dart';
 
 class SideNav extends StatefulWidget {
@@ -57,16 +58,7 @@ class _SideNavState extends State<SideNav> {
                           child: Holder(
                             Row(
                               children: <Widget>[
-                                Expanded(
-                                    child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text("View Space"),
-                                    Text("Create a Channel"),
-                                    Text("Manage Channels"),
-                                    Text("Invite Friends"),
-                                  ],
-                                )),
+                                Expanded(child: Options()),
                               ],
                             ),
                           ),
