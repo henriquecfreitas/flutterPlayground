@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutterPlayground/application/app.dart';
+import 'package:flutterPlayground/application/models/space.dart';
 import 'package:flutterPlayground/application/models/user.dart';
 
 import 'package:flutterPlayground/ui/app_colors.dart';
@@ -11,7 +12,7 @@ class Spaces extends StatefulWidget {
   @override
   _SpacesState createState() {
     _SpacesState state = _SpacesState(user: App.shared.user);
-    App.shared.subscribe(state);
+    App.shared.subscribeAppInit(state);
     return state;
   }
 }
@@ -22,7 +23,9 @@ class _SpacesState extends State<Spaces> implements AppInitListener {
 
   @override
   void onUserFetched(User user) {
-    this.user = user;
+    setState(() {
+      this.user = user;
+    });
   }
 
   @override
@@ -42,8 +45,12 @@ class _SpacesState extends State<Spaces> implements AppInitListener {
             color: AppColors.highlightText,
           );
         }
-        return CircleImage(
-          image: user.spaces[index].avatarData.imageProvider(),
+        Space space = user.spaces[index];
+        return InkWell(
+          onTap: () => App.shared.selectSpace(space),
+          child: CircleImage(
+            image: space.avatarData.imageProvider(),
+          ),
         );
       },
       separatorBuilder: (BuildContext context, int index) => SizedBox(

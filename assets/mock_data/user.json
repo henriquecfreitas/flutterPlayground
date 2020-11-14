@@ -50,7 +50,17 @@
       "avatarData": {
         "type": "URL",
         "value": "http://lorempixel.com/300/300?cache=2"
-      } 
+      },
+      "channelGroups": [
+        {
+          "name": "Chai Bollywood",
+          "textChannels": [
+            {
+              "name": "general"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 3,
@@ -58,7 +68,17 @@
       "avatarData": {
         "type": "URL",
         "value": "http://lorempixel.com/300/300?cache=3"
-      } 
+      },
+      "channelGroups": [
+        {
+          "name": "Mainland",
+          "textChannels": [
+            {
+              "name": "lareneg"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 4,

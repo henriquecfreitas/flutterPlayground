@@ -1,38 +1,42 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutterPlayground/application/app.dart';
-import 'package:flutterPlayground/application/models/user.dart';
+import 'package:flutterPlayground/application/models/space.dart';
 
 import 'package:flutterPlayground/ui/app_colors.dart';
-import 'package:flutterPlayground/ui/avatar_handler.dart';
-import 'package:flutterPlayground/ui/components/particles/circle_image.dart';
 import 'package:flutterPlayground/ui/components/particles/holder.dart';
 
 class Channels extends StatefulWidget {
   @override
   _ChannelsState createState() {
-    _ChannelsState state = _ChannelsState(user: App.shared.user);
-    App.shared.subscribe(state);
+    _ChannelsState state = _ChannelsState(space: App.shared.space);
+    App.shared.subscribeDataUpdate(state);
     return state;
   }
 }
 
-class _ChannelsState extends State<Channels> implements AppInitListener {
-  User user;
-  _ChannelsState({@required this.user});
+class _ChannelsState extends State<Channels> implements DataUpdateListener {
+  Space space;
+  _ChannelsState({@required this.space});
 
   @override
-  void onUserFetched(User user) {
-    this.user = user;
+  void onSpaceSelected(Space space) {
+    setState(() {
+      this.space = space;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (user == null) {
+    if (space == null) {
       return Container();
     }
+    if (space.channelGroups.isEmpty) {
+      return Holder.transparent(
+          Text("There are no channels in this space yet"));
+    }
     return Column(
-      children: List<Widget>.from(user.spaces[0].channelGroups.expand((group) {
+      children: List<Widget>.from(space.channelGroups.expand((group) {
         return [
           _Channel.group(name: group.name),
           ...group.channels.map((channel) => _Channel(name: channel.name)),

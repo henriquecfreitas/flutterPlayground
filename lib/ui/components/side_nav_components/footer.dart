@@ -12,7 +12,7 @@ class Footer extends StatefulWidget {
   @override
   _FooterState createState() {
     _FooterState state = _FooterState(user: App.shared.user);
-    App.shared.subscribe(state);
+    App.shared.subscribeAppInit(state);
     return state;
   }
 }
@@ -23,7 +23,9 @@ class _FooterState extends State<Footer> implements AppInitListener {
 
   @override
   void onUserFetched(User user) {
-    this.user = user;
+    setState(() {
+      this.user = user;
+    });
   }
 
   @override
