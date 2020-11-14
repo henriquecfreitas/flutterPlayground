@@ -1,0 +1,66 @@
+{
+  "id": 13,
+  "name": "henrique",
+  "avatarData": {
+    "type": "URL",
+    "value": "http://lorempixel.com/300/300?cache=0"
+  },
+  "spaces": [
+    {
+      "id": 1,
+      "name": "Space 1",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=1"
+      } 
+    },
+    {
+      "id": 2,
+      "name": "Space 2",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=2"
+      } 
+    },
+    {
+      "id": 3,
+      "name": "Space 3",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=3"
+      } 
+    },
+    {
+      "id": 4,
+      "name": "Space 4",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=4"
+      } 
+    },
+    {
+      "id": 5,
+      "name": "Space 5",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=5"
+      } 
+    },
+    {
+      "id": 6,
+      "name": "Space 6",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=6"
+      } 
+    },
+    {
+      "id": 7,
+      "name": "Space 7",
+      "avatarData": {
+        "type": "URL",
+        "value": "http://lorempixel.com/300/300?cache=7"
+      } 
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterPlayground/components/side_nav.dart';
-import 'package:flutterPlayground/pages/home.dart';
+
+import 'package:flutterPlayground/application/app.dart';
+
+import 'package:flutterPlayground/ui/components/side_nav.dart';
+import 'package:flutterPlayground/ui/pages/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,6 +12,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    App.shared.init(context);
     return MaterialApp(
       title: 'Spaces',
       theme: ThemeData(
