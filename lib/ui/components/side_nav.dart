@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutterPlayground/app_colors.dart';
-import 'package:flutterPlayground/components/particles/circle_image.dart';
-import 'package:flutterPlayground/components/particles/holder.dart';
+import 'package:flutterPlayground/ui/app_colors.dart';
+
+import 'package:flutterPlayground/ui/components/particles/holder.dart';
+
+import 'package:flutterPlayground/ui/components/side_nav_components/footer.dart';
+import 'package:flutterPlayground/ui/components/side_nav_components/header.dart';
+import 'package:flutterPlayground/ui/components/side_nav_components/spaces.dart';
 
 class SideNav extends StatefulWidget {
   @override
@@ -9,6 +13,9 @@ class SideNav extends StatefulWidget {
 }
 
 class _SideNavState extends State<SideNav> {
+  final EdgeInsets headerMargin = EdgeInsets.only(bottom: 1.5);
+  final EdgeInsets footerMargin = EdgeInsets.only(top: 1.5);
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -19,8 +26,7 @@ class _SideNavState extends State<SideNav> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: Holder(Text('My Spaces'),
-                      margin: EdgeInsets.only(bottom: 1.5)),
+                  child: Holder(Header(), margin: headerMargin),
                 ),
               ],
             ),
@@ -32,20 +38,7 @@ class _SideNavState extends State<SideNav> {
                   Expanded(
                     flex: 2,
                     child: Holder.transparent(
-                      ListView.separated(
-                        physics: BouncingScrollPhysics(),
-                        scrollDirection: Axis.vertical,
-                        shrinkWrap: true,
-                        itemCount: 6,
-                        itemBuilder: (BuildContext context, int index) =>
-                            CircleImage(
-                          image: NetworkImage("http://lorempixel.com/300/300"),
-                        ),
-                        separatorBuilder: (BuildContext context, int index) =>
-                            SizedBox(
-                          height: 8,
-                        ),
-                      ),
+                      Spaces(),
                     ),
                   ),
                   Expanded(
@@ -87,8 +80,7 @@ class _SideNavState extends State<SideNav> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child:
-                      Holder(Text('Footer'), margin: EdgeInsets.only(top: 1.5)),
+                  child: Holder(Footer(), margin: footerMargin),
                 ),
               ],
             ),

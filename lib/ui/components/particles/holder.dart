@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutterPlayground/app_colors.dart';
+import 'package:flutterPlayground/ui/app_colors.dart';
 
 class Holder extends StatelessWidget {
   final Widget content;

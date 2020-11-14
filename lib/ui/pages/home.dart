@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterPlayground/app_colors.dart';
-import 'package:flutterPlayground/components/fake_home_page.dart';
+import 'package:flutterPlayground/ui/app_colors.dart';
+import 'package:flutterPlayground/ui/components/fake_home_page.dart';
 
 class Home extends StatefulWidget {
   @override
