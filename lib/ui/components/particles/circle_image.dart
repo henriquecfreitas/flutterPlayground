@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CircleImage extends StatelessWidget {
   final ImageProvider image;
   final double radius;
-  CircleImage({this.radius, this.image});
+  CircleImage({@required this.image, this.radius});
 
   @override
   Widget build(BuildContext context) {

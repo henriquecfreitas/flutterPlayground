@@ -34,10 +34,12 @@ class _FooterState extends State<Footer> implements AppInitListener {
     return Row(
       children: <Widget>[
         Expanded(
-            flex: 2,
-            child: CircleImage(image: user.avatarData.imageProvider())),
+            flex: 1,
+            child: CircleImage(
+              image: user.avatarData.imageProvider(),
+            )),
         Expanded(
-          flex: 5,
+          flex: 6,
           child: Holder.transparent(Text('@${user.name}',
               style: TextStyle(
                 fontWeight: FontWeight.w600,

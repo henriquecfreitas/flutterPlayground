@@ -12,7 +12,17 @@
       "avatarData": {
         "type": "URL",
         "value": "http://lorempixel.com/300/300?cache=1"
-      } 
+      },
+      "channelGroups": [
+        {
+          "name": "Cafe Hollywood",
+          "textChannels": [
+            {
+              "name": "general"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 2,

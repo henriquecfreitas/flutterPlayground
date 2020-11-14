@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterPlayground/ui/app_colors.dart';
 
 import 'package:flutterPlayground/ui/components/particles/holder.dart';
+import 'package:flutterPlayground/ui/components/side_nav_components/channels.dart';
 
 import 'package:flutterPlayground/ui/components/side_nav_components/footer.dart';
 import 'package:flutterPlayground/ui/components/side_nav_components/header.dart';
@@ -48,7 +49,7 @@ class _SideNavState extends State<SideNav> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
-                            Expanded(child: Holder(Text("Cafe Hollywood"))),
+                            Expanded(child: Holder(Channels())),
                           ],
                         ),
                         SizedBox(
@@ -72,7 +73,11 @@ class _SideNavState extends State<SideNav> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: Holder(Footer(), margin: footerMargin),
+                  child: Holder(
+                    Footer(),
+                    margin: footerMargin,
+                    padding: EdgeInsets.fromLTRB(5.0, 0.0, 2.0, 0.0),
+                  ),
                 ),
               ],
             ),

@@ -11,4 +11,5 @@ class AppColors {
   static final lightBackground = Color.fromRGBO(243, 243, 243, 1.0);
 
   static final border = lightBackground.withAlpha(213);
+  static final disabled = darkBackground;
 }
