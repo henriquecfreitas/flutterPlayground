@@ -21,6 +21,26 @@
               "name": "general"
             }
           ]
+        },{
+          "name": "Group 1",
+          "textChannels": [
+            {
+              "name": "hello"
+            },
+            {
+              "name": "darkness"
+            },
+            {
+              "name": "my old friend"
+            }
+          ]
+        },{
+          "name": "Group 3",
+          "textChannels": [
+            {
+              "name": "there is no G2"
+            }
+          ]
         }
       ]
     },

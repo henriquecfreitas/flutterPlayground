@@ -45,7 +45,7 @@ class _SideNavState extends State<SideNav> {
                   ),
                   Expanded(
                     flex: 8,
-                    child: Column(
+                    child: ListView(
                       children: <Widget>[
                         Row(
                           children: <Widget>[
