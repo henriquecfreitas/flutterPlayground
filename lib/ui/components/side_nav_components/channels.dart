@@ -66,7 +66,7 @@ class _Channel extends StatelessWidget {
           )),
           Icon(
             Icons.more_vert,
-            color: isGroup ? AppColors.text : AppColors.disabled,
+            color: isGroup ? AppColors.theme.text : AppColors.theme.disabled,
           ),
         ],
       ),

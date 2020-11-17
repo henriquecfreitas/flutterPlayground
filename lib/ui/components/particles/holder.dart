@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutterPlayground/ui/app_colors.dart';
 
 class Holder extends StatelessWidget {
@@ -10,12 +10,12 @@ class Holder extends StatelessWidget {
   Holder(this.content,
       {this.margin = const EdgeInsets.all(0.0),
       this.padding = const EdgeInsets.all(12.0)})
-      : backgroundColor = AppColors.highlightBackground;
+      : backgroundColor = AppColors.theme.highlightBackground;
 
   Holder.transparent(this.content,
       {this.margin = const EdgeInsets.all(0.0),
       this.padding = const EdgeInsets.all(12.0)})
-      : backgroundColor = AppColors.transparent;
+      : backgroundColor = AppColors.theme.transparent;
 
   @override
   Widget build(BuildContext context) {

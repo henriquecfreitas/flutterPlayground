@@ -23,7 +23,7 @@ class _SideNavState extends State<SideNav> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: AppColors.darkBackground,
+        color: AppColors.theme.darkBackground,
         child: Column(
           children: <Widget>[
             Row(

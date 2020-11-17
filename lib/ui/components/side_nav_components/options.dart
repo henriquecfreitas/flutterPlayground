@@ -29,12 +29,13 @@ class _OptionsItem extends StatelessWidget {
       children: <Widget>[
         Holder.transparent(Icon(
           icon,
-          color: AppColors.highlightText,
+          color: AppColors.theme.highlightText,
         )),
         Text(
           title,
           style: TextStyle(
-              color: AppColors.highlightText, fontWeight: FontWeight.w600),
+              color: AppColors.theme.highlightText,
+              fontWeight: FontWeight.w600),
         ),
       ],
     );

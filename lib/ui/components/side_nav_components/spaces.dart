@@ -42,7 +42,7 @@ class _SpacesState extends State<Spaces> implements AppInitListener {
         if (index >= user.spaces.length) {
           return Icon(
             Icons.search,
-            color: AppColors.highlightText,
+            color: AppColors.theme.highlightText,
           );
         }
         Space space = user.spaces[index];

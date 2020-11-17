@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 import 'package:flutterPlayground/application/models/avatar_data.dart';
 
